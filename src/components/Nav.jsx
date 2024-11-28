@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,36 +8,57 @@ const Nav = () => {
     <nav className="bg-gradient-to-r from-sky-500 to-blue-500 text-white shadow-lg">
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
-        <a
-          href="/"
+        <NavLink
+          to="/"
           className="text-xl font-bold hover:scale-105 transition-transform"
         >
           Shop Smart with Juan
-        </a>
+        </NavLink>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <a href="/" className="hover:text-gray-200 transition-colors">
-            Home
-          </a>
-          <a
-            href="/electronics"
+          <NavLink
+            to="/"
             className="hover:text-gray-200 transition-colors"
+            activeClassName="text-gray-300" // Ganti dengan kelas yang diinginkan saat aktif
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/electronics"
+            className="hover:text-gray-200 transition-colors"
+            activeClassName="text-gray-300" // Ganti dengan kelas yang diinginkan saat aktif
           >
             Electronics
-          </a>
-          <a href="/celana" className="hover:text-gray-200 transition-colors">
+          </NavLink>
+          <NavLink
+            to="/celana"
+            className="hover:text-gray-200 transition-colors"
+            activeClassName="text-gray-300" // Ganti dengan kelas yang diinginkan saat aktif
+          >
             Celana
-          </a>
-          <a href="/pakaian" className="hover:text-gray-200 transition-colors">
+          </NavLink>
+          <NavLink
+            to="/pakaian"
+            className="hover:text-gray-200 transition-colors"
+            activeClassName="text-gray-300" // Ganti dengan kelas yang diinginkan saat aktif
+          >
             Pakaian
-          </a>
-          <a href="/makeup" className="hover:text-gray-200 transition-colors">
+          </NavLink>
+          <NavLink
+            to="/makeup"
+            className="hover:text-gray-200 transition-colors"
+            activeClassName="text-gray-300" // Ganti dengan kelas yang diinginkan saat aktif
+          >
             Make Up
-          </a>
-          <a href="/about" className="hover:text-gray-200 transition-colors">
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="hover:text-gray-200 transition-colors"
+            activeClassName="text-gray-300" // Ganti dengan kelas yang diinginkan saat aktif
+          >
             About Me
-          </a>
+          </NavLink>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -65,24 +87,24 @@ const Nav = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-sky-600 text-white shadow-lg">
-          <a href="/" className="block px-4 py-2 hover:bg-sky-500">
+          <NavLink to="/" className="block px-4 py-2 hover:bg-sky-500">
             Home
-          </a>
-          <a href="/electronics" className="block px-4 py-2 hover:bg-sky-500">
+          </NavLink>
+          <NavLink to="/electronics" className="block px-4 py-2 hover:bg-sky-500">
             Electronics
-          </a>
-          <a href="/celana" className="block px-4 py-2 hover:bg-sky-500">
+          </NavLink>
+          <NavLink to="/celana" className="block px-4 py-2 hover:bg-sky-500">
             Celana
-          </a>
-          <a href="/pakaian" className="block px-4 py-2 hover:bg-sky-500">
+          </NavLink>
+          <NavLink to="/pakaian" className="block px-4 py-2 hover:bg-sky-500">
             Pakaian
-          </a>
-          <a href="/makeup" className="block px-4 py-2 hover:bg-sky-500">
+          </NavLink>
+          <NavLink to="/makeup" className="block px-4 py-2 hover:bg-sky-500">
             Make Up
-          </a>
-          <a href="/about" className="block px-4 py-2 hover:bg-sky-500">
+          </NavLink>
+          <NavLink to="/about" className="block px-4 py-2 hover:bg-sky-500">
             About Me
-          </a>
+          </NavLink>
         </div>
       )}
     </nav>
