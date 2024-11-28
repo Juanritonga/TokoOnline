@@ -1,3 +1,5 @@
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 function About() {
   return (
     <div className="container-about py-12 bg-gray-50">

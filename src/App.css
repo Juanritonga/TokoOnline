@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Animasi Fade In dan Bounce */
 @keyframes fadeIn {
     0% {
@@ -46,4 +47,6 @@
   .animate-bounce {
     animation: bounce 1s infinite;
   }
+
+  
   
