@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animasi Fade In dan Bounce */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Animasi untuk elemen pembayaran berhasil */
+  .animate-paymentSuccess {
+    animation: fadeIn 1s ease-out, bounce 1s infinite;
+  }
+  
+  /* Menambahkan border hijau dan sedikit bayangan */
+  .bg-green-100 {
+    background-color: #d1fae5;
+  }
+  
+  .text-green-700 {
+    color: #15803d;
+  }
+  
+  .border-green-500 {
+    border-color: #10b981;
+  }
+  
+  /* Ikon centang berwarna hijau */
+  .animate-bounce {
+    animation: bounce 1s infinite;
+  }
+  
